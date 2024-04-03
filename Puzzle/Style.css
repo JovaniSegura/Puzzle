@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  background-color: rgba(223, 210, 236, 0.584);
+  justify-content: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5vw;
+}
+
+.tabla {
+  width: 30vw;
+  height: 30vw;
+  background-color: rgb(81, 6, 84);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  padding: 10px;
+  gap: 5px;
+}
+
+input {
+  width: 6vw;
+  height: 6vw;
+  font-size: 4.0vw;
+  font-family: "Angolla", sans-serif;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  padding: 0; /* Ajusta este valor */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+
+.Blanco {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+@media screen and (max-width: 600px){
+  .tabla{
+    width: 60vw;
+    height: 60vw;
+  }
+
+  input{
+    width: 12vw;
+    height: 12vw;
+    font-size: 8vw;
+  }
+}
+
+@media screen and ((min-width: 601px) and (max-width: 999px)){
+  .tabla{
+    width: 40vw;
+    height: 40vw;
+  }
+
+  input{
+    width: 8vw;
+    height: 8vw;
+    font-size: 5.5vw;
+  }
+}
