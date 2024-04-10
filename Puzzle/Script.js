@@ -100,17 +100,25 @@ document.addEventListener("keydown", (e) => {
     let canvas = document.querySelector("canvas");
     canvas.style.display = "inline";
     setTimeout(() => {
-      let partidaNueva = confirm(
-        "Felicidades, HAZ GANADOOO!!!, ¿Deseas Jugar una nueva partida?"
-      );
-      if (partidaNueva) {
-        canvas.style.display = "none";
-        let inputs = document.querySelectorAll("input");
-        for (let i = 0; i < inputs.length; i++) {
-          inputs[i].parentNode.removeChild(inputs[i]);
-        }
-        ejecutarNumeros();
-      }
+      Swal.fire({
+          title: "HAZ GANADO?",
+          text: "¿Quieres jugar de nuevo?",
+          icon: "success",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "SI",
+          cancelButtonText: "NO"
+      }).then((result) => {
+            if (result.isConfirmed) {
+              canvas.style.display = "none";
+              let inputs = document.querySelectorAll("input");
+              for (let i = 0; i < inputs.length; i++) {
+                inputs[i].parentNode.removeChild(inputs[i]);
+              }
+              ejecutarNumeros();
+            }
+        });
     }, 300);
   }
 });
